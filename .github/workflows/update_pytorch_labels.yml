@@ -14,7 +14,7 @@ jobs:
     if: ${{ github.repository == 'pytorch/pytorch' }}
     steps:
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
       - name: Update PyTorch labels list in S3
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_OSSCI_METRICS_V2_ACCESS_KEY_ID }}

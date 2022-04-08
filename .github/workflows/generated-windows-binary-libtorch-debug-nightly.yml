@@ -92,7 +92,7 @@ jobs:
           echo "PYTORCH_FINAL_PACKAGE_DIR=${RUNNER_TEMP}/artifacts" >> "${GITHUB_ENV}"
           echo "WIN_PACKAGE_WORK_DIR=${RUNNER_TEMP}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -103,7 +103,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -204,7 +204,7 @@ jobs:
           name: libtorch-cpu-shared-with-deps-debug
           path: "${{ env.PYTORCH_FINAL_PACKAGE_DIR }}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -215,7 +215,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -431,7 +431,7 @@ jobs:
           echo "PYTORCH_FINAL_PACKAGE_DIR=${RUNNER_TEMP}/artifacts" >> "${GITHUB_ENV}"
           echo "WIN_PACKAGE_WORK_DIR=${RUNNER_TEMP}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -442,7 +442,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -543,7 +543,7 @@ jobs:
           name: libtorch-cpu-shared-without-deps-debug
           path: "${{ env.PYTORCH_FINAL_PACKAGE_DIR }}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -554,7 +554,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -770,7 +770,7 @@ jobs:
           echo "PYTORCH_FINAL_PACKAGE_DIR=${RUNNER_TEMP}/artifacts" >> "${GITHUB_ENV}"
           echo "WIN_PACKAGE_WORK_DIR=${RUNNER_TEMP}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -781,7 +781,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -882,7 +882,7 @@ jobs:
           name: libtorch-cpu-static-with-deps-debug
           path: "${{ env.PYTORCH_FINAL_PACKAGE_DIR }}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -893,7 +893,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -1109,7 +1109,7 @@ jobs:
           echo "PYTORCH_FINAL_PACKAGE_DIR=${RUNNER_TEMP}/artifacts" >> "${GITHUB_ENV}"
           echo "WIN_PACKAGE_WORK_DIR=${RUNNER_TEMP}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -1120,7 +1120,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -1221,7 +1221,7 @@ jobs:
           name: libtorch-cpu-static-without-deps-debug
           path: "${{ env.PYTORCH_FINAL_PACKAGE_DIR }}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -1232,7 +1232,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -1449,7 +1449,7 @@ jobs:
           echo "PYTORCH_FINAL_PACKAGE_DIR=${RUNNER_TEMP}/artifacts" >> "${GITHUB_ENV}"
           echo "WIN_PACKAGE_WORK_DIR=${RUNNER_TEMP}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -1460,7 +1460,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -1562,7 +1562,7 @@ jobs:
           name: libtorch-cuda11_3-shared-with-deps-debug
           path: "${{ env.PYTORCH_FINAL_PACKAGE_DIR }}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -1573,7 +1573,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -1791,7 +1791,7 @@ jobs:
           echo "PYTORCH_FINAL_PACKAGE_DIR=${RUNNER_TEMP}/artifacts" >> "${GITHUB_ENV}"
           echo "WIN_PACKAGE_WORK_DIR=${RUNNER_TEMP}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -1802,7 +1802,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -1904,7 +1904,7 @@ jobs:
           name: libtorch-cuda11_3-shared-without-deps-debug
           path: "${{ env.PYTORCH_FINAL_PACKAGE_DIR }}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -1915,7 +1915,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -2133,7 +2133,7 @@ jobs:
           echo "PYTORCH_FINAL_PACKAGE_DIR=${RUNNER_TEMP}/artifacts" >> "${GITHUB_ENV}"
           echo "WIN_PACKAGE_WORK_DIR=${RUNNER_TEMP}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -2144,7 +2144,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -2246,7 +2246,7 @@ jobs:
           name: libtorch-cuda11_3-static-with-deps-debug
           path: "${{ env.PYTORCH_FINAL_PACKAGE_DIR }}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -2257,7 +2257,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -2475,7 +2475,7 @@ jobs:
           echo "PYTORCH_FINAL_PACKAGE_DIR=${RUNNER_TEMP}/artifacts" >> "${GITHUB_ENV}"
           echo "WIN_PACKAGE_WORK_DIR=${RUNNER_TEMP}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -2486,7 +2486,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -2588,7 +2588,7 @@ jobs:
           name: libtorch-cuda11_3-static-without-deps-debug
           path: "${{ env.PYTORCH_FINAL_PACKAGE_DIR }}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -2599,7 +2599,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -2817,7 +2817,7 @@ jobs:
           echo "PYTORCH_FINAL_PACKAGE_DIR=${RUNNER_TEMP}/artifacts" >> "${GITHUB_ENV}"
           echo "WIN_PACKAGE_WORK_DIR=${RUNNER_TEMP}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -2828,7 +2828,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -2930,7 +2930,7 @@ jobs:
           name: libtorch-cuda11_5-shared-with-deps-debug
           path: "${{ env.PYTORCH_FINAL_PACKAGE_DIR }}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -2941,7 +2941,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -3159,7 +3159,7 @@ jobs:
           echo "PYTORCH_FINAL_PACKAGE_DIR=${RUNNER_TEMP}/artifacts" >> "${GITHUB_ENV}"
           echo "WIN_PACKAGE_WORK_DIR=${RUNNER_TEMP}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -3170,7 +3170,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -3272,7 +3272,7 @@ jobs:
           name: libtorch-cuda11_5-shared-without-deps-debug
           path: "${{ env.PYTORCH_FINAL_PACKAGE_DIR }}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -3283,7 +3283,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -3501,7 +3501,7 @@ jobs:
           echo "PYTORCH_FINAL_PACKAGE_DIR=${RUNNER_TEMP}/artifacts" >> "${GITHUB_ENV}"
           echo "WIN_PACKAGE_WORK_DIR=${RUNNER_TEMP}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -3512,7 +3512,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -3614,7 +3614,7 @@ jobs:
           name: libtorch-cuda11_5-static-with-deps-debug
           path: "${{ env.PYTORCH_FINAL_PACKAGE_DIR }}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -3625,7 +3625,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -3843,7 +3843,7 @@ jobs:
           echo "PYTORCH_FINAL_PACKAGE_DIR=${RUNNER_TEMP}/artifacts" >> "${GITHUB_ENV}"
           echo "WIN_PACKAGE_WORK_DIR=${RUNNER_TEMP}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -3854,7 +3854,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -3956,7 +3956,7 @@ jobs:
           name: libtorch-cuda11_5-static-without-deps-debug
           path: "${{ env.PYTORCH_FINAL_PACKAGE_DIR }}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -3967,7 +3967,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive

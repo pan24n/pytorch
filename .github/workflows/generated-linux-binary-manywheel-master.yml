@@ -9,8 +9,8 @@ on:
     branches:
       - master
     tags:
-      - 'ciflow/all/*'
-      - 'ciflow/trunk/*'
+      - "ciflow/all/*"
+      - "ciflow/trunk/*"
   workflow_dispatch:
 
 env:
@@ -103,7 +103,7 @@ jobs:
         run: |
           env | grep '^GITHUB' > "/tmp/github_env_${GITHUB_RUN_ID}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -114,7 +114,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -263,7 +263,7 @@ jobs:
           name: manywheel-py3_7-cuda10_2
           path: "${{ runner.temp }}/artifacts/"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -274,7 +274,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive

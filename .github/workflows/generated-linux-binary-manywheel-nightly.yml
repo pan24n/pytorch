@@ -106,7 +106,7 @@ jobs:
         run: |
           env | grep '^GITHUB' > "/tmp/github_env_${GITHUB_RUN_ID}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -117,7 +117,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -265,7 +265,7 @@ jobs:
           name: manywheel-py3_7-cpu
           path: "${{ runner.temp }}/artifacts/"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -276,7 +276,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -534,7 +534,7 @@ jobs:
         run: |
           env | grep '^GITHUB' > "/tmp/github_env_${GITHUB_RUN_ID}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -545,7 +545,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -694,7 +694,7 @@ jobs:
           name: manywheel-py3_7-cuda10_2
           path: "${{ runner.temp }}/artifacts/"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -705,7 +705,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -975,7 +975,7 @@ jobs:
         run: |
           env | grep '^GITHUB' > "/tmp/github_env_${GITHUB_RUN_ID}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -986,7 +986,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -1138,7 +1138,7 @@ jobs:
           name: manywheel-py3_7-cuda11_3
           path: "${{ runner.temp }}/artifacts/"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -1149,7 +1149,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -1419,7 +1419,7 @@ jobs:
         run: |
           env | grep '^GITHUB' > "/tmp/github_env_${GITHUB_RUN_ID}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -1430,7 +1430,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -1582,7 +1582,7 @@ jobs:
           name: manywheel-py3_7-cuda11_5
           path: "${{ runner.temp }}/artifacts/"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -1593,7 +1593,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -1863,7 +1863,7 @@ jobs:
         run: |
           env | grep '^GITHUB' > "/tmp/github_env_${GITHUB_RUN_ID}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -1874,7 +1874,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -2023,7 +2023,7 @@ jobs:
           name: manywheel-py3_7-rocm4_5_2
           path: "${{ runner.temp }}/artifacts/"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -2034,7 +2034,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -2293,7 +2293,7 @@ jobs:
         run: |
           env | grep '^GITHUB' > "/tmp/github_env_${GITHUB_RUN_ID}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -2304,7 +2304,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -2453,7 +2453,7 @@ jobs:
           name: manywheel-py3_7-rocm5_0
           path: "${{ runner.temp }}/artifacts/"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -2464,7 +2464,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -2722,7 +2722,7 @@ jobs:
         run: |
           env | grep '^GITHUB' > "/tmp/github_env_${GITHUB_RUN_ID}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -2733,7 +2733,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -2881,7 +2881,7 @@ jobs:
           name: manywheel-py3_8-cpu
           path: "${{ runner.temp }}/artifacts/"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -2892,7 +2892,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -3150,7 +3150,7 @@ jobs:
         run: |
           env | grep '^GITHUB' > "/tmp/github_env_${GITHUB_RUN_ID}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -3161,7 +3161,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -3310,7 +3310,7 @@ jobs:
           name: manywheel-py3_8-cuda10_2
           path: "${{ runner.temp }}/artifacts/"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -3321,7 +3321,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -3591,7 +3591,7 @@ jobs:
         run: |
           env | grep '^GITHUB' > "/tmp/github_env_${GITHUB_RUN_ID}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -3602,7 +3602,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -3754,7 +3754,7 @@ jobs:
           name: manywheel-py3_8-cuda11_3
           path: "${{ runner.temp }}/artifacts/"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -3765,7 +3765,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -4035,7 +4035,7 @@ jobs:
         run: |
           env | grep '^GITHUB' > "/tmp/github_env_${GITHUB_RUN_ID}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -4046,7 +4046,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -4198,7 +4198,7 @@ jobs:
           name: manywheel-py3_8-cuda11_5
           path: "${{ runner.temp }}/artifacts/"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -4209,7 +4209,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -4479,7 +4479,7 @@ jobs:
         run: |
           env | grep '^GITHUB' > "/tmp/github_env_${GITHUB_RUN_ID}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -4490,7 +4490,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -4639,7 +4639,7 @@ jobs:
           name: manywheel-py3_8-rocm4_5_2
           path: "${{ runner.temp }}/artifacts/"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -4650,7 +4650,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -4909,7 +4909,7 @@ jobs:
         run: |
           env | grep '^GITHUB' > "/tmp/github_env_${GITHUB_RUN_ID}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -4920,7 +4920,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -5069,7 +5069,7 @@ jobs:
           name: manywheel-py3_8-rocm5_0
           path: "${{ runner.temp }}/artifacts/"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -5080,7 +5080,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -5338,7 +5338,7 @@ jobs:
         run: |
           env | grep '^GITHUB' > "/tmp/github_env_${GITHUB_RUN_ID}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -5349,7 +5349,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -5497,7 +5497,7 @@ jobs:
           name: manywheel-py3_9-cpu
           path: "${{ runner.temp }}/artifacts/"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -5508,7 +5508,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -5766,7 +5766,7 @@ jobs:
         run: |
           env | grep '^GITHUB' > "/tmp/github_env_${GITHUB_RUN_ID}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -5777,7 +5777,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -5926,7 +5926,7 @@ jobs:
           name: manywheel-py3_9-cuda10_2
           path: "${{ runner.temp }}/artifacts/"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -5937,7 +5937,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -6207,7 +6207,7 @@ jobs:
         run: |
           env | grep '^GITHUB' > "/tmp/github_env_${GITHUB_RUN_ID}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -6218,7 +6218,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -6370,7 +6370,7 @@ jobs:
           name: manywheel-py3_9-cuda11_3
           path: "${{ runner.temp }}/artifacts/"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -6381,7 +6381,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -6651,7 +6651,7 @@ jobs:
         run: |
           env | grep '^GITHUB' > "/tmp/github_env_${GITHUB_RUN_ID}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -6662,7 +6662,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -6814,7 +6814,7 @@ jobs:
           name: manywheel-py3_9-cuda11_5
           path: "${{ runner.temp }}/artifacts/"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -6825,7 +6825,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -7095,7 +7095,7 @@ jobs:
         run: |
           env | grep '^GITHUB' > "/tmp/github_env_${GITHUB_RUN_ID}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -7106,7 +7106,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -7255,7 +7255,7 @@ jobs:
           name: manywheel-py3_9-rocm4_5_2
           path: "${{ runner.temp }}/artifacts/"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -7266,7 +7266,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -7525,7 +7525,7 @@ jobs:
         run: |
           env | grep '^GITHUB' > "/tmp/github_env_${GITHUB_RUN_ID}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -7536,7 +7536,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -7685,7 +7685,7 @@ jobs:
           name: manywheel-py3_9-rocm5_0
           path: "${{ runner.temp }}/artifacts/"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -7696,7 +7696,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -7954,7 +7954,7 @@ jobs:
         run: |
           env | grep '^GITHUB' > "/tmp/github_env_${GITHUB_RUN_ID}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -7965,7 +7965,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -8113,7 +8113,7 @@ jobs:
           name: manywheel-py3_10-cpu
           path: "${{ runner.temp }}/artifacts/"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -8124,7 +8124,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -8382,7 +8382,7 @@ jobs:
         run: |
           env | grep '^GITHUB' > "/tmp/github_env_${GITHUB_RUN_ID}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -8393,7 +8393,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -8542,7 +8542,7 @@ jobs:
           name: manywheel-py3_10-cuda10_2
           path: "${{ runner.temp }}/artifacts/"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -8553,7 +8553,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -8823,7 +8823,7 @@ jobs:
         run: |
           env | grep '^GITHUB' > "/tmp/github_env_${GITHUB_RUN_ID}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -8834,7 +8834,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -8986,7 +8986,7 @@ jobs:
           name: manywheel-py3_10-cuda11_3
           path: "${{ runner.temp }}/artifacts/"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -8997,7 +8997,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -9267,7 +9267,7 @@ jobs:
         run: |
           env | grep '^GITHUB' > "/tmp/github_env_${GITHUB_RUN_ID}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -9278,7 +9278,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -9430,7 +9430,7 @@ jobs:
           name: manywheel-py3_10-cuda11_5
           path: "${{ runner.temp }}/artifacts/"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -9441,7 +9441,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -9711,7 +9711,7 @@ jobs:
         run: |
           env | grep '^GITHUB' > "/tmp/github_env_${GITHUB_RUN_ID}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -9722,7 +9722,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -9871,7 +9871,7 @@ jobs:
           name: manywheel-py3_10-rocm4_5_2
           path: "${{ runner.temp }}/artifacts/"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -9882,7 +9882,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -10141,7 +10141,7 @@ jobs:
         run: |
           env | grep '^GITHUB' > "/tmp/github_env_${GITHUB_RUN_ID}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -10152,7 +10152,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
@@ -10301,7 +10301,7 @@ jobs:
           name: manywheel-py3_10-rocm5_0
           path: "${{ runner.temp }}/artifacts/"
       - name: Checkout PyTorch
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -10312,7 +10312,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
+        uses: clee2000/checkout
         with:
           ref: main
           submodules: recursive
