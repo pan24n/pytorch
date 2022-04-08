@@ -8,8 +8,9 @@ on:
   push:
     branches:
       - master
-      - "ciflow/all/*"
-      - "ciflow/trunk/*"
+    tags:
+      - 'ciflow/all/*'
+      - 'ciflow/trunk/*'
   workflow_dispatch:
 
 env:
