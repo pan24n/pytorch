@@ -333,8 +333,8 @@ class FusedMovingAvgObsFakeQuantize(FakeQuantize):
             self.is_symmetric_quant,
         )
 
-default_fake_quant = FakeQuantize.with_args(observer=MovingAverageMinMaxObserver, quant_min=0, quant_max=255,
-                                            dtype=torch.quint8, qscheme=torch.per_tensor_affine, reduce_range=True)
+default_fake_quant = FakeQuantize.with_args(observer=MovingAverageMinMaxObserver, quant_min=0, quant_max=127,
+                                            dtype=torch.quint8, qscheme=torch.per_tensor_affine)
 """
 Default fake_quant for activations.
 """
@@ -386,10 +386,9 @@ default_embedding_fake_quant_4bit = FakeQuantize.with_args(observer=MovingAverag
 
 default_histogram_fake_quant = FakeQuantize.with_args(observer=HistogramObserver,
                                                       quant_min=0,
-                                                      quant_max=255,
+                                                      quant_max=127,
                                                       dtype=torch.quint8,
-                                                      qscheme=torch.per_tensor_affine,
-                                                      reduce_range=True)
+                                                      qscheme=torch.per_tensor_affine)
 """
 Fake_quant for activations using a histogram..
 """
