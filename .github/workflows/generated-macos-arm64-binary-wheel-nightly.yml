@@ -75,7 +75,7 @@ jobs:
           /bin/bash "${RUNNER_TEMP}/conda.sh" -b -p "${RUNNER_TEMP}/anaconda"
           echo "${RUNNER_TEMP}/anaconda/bin" >> "${GITHUB_PATH}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -86,7 +86,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: main
           submodules: recursive
@@ -281,7 +281,7 @@ jobs:
           /bin/bash "${RUNNER_TEMP}/conda.sh" -b -p "${RUNNER_TEMP}/anaconda"
           echo "${RUNNER_TEMP}/anaconda/bin" >> "${GITHUB_PATH}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -292,7 +292,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: main
           submodules: recursive
@@ -487,7 +487,7 @@ jobs:
           /bin/bash "${RUNNER_TEMP}/conda.sh" -b -p "${RUNNER_TEMP}/anaconda"
           echo "${RUNNER_TEMP}/anaconda/bin" >> "${GITHUB_PATH}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -498,7 +498,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: main
           submodules: recursive
@@ -693,7 +693,7 @@ jobs:
           /bin/bash "${RUNNER_TEMP}/conda.sh" -b -p "${RUNNER_TEMP}/anaconda"
           echo "${RUNNER_TEMP}/anaconda/bin" >> "${GITHUB_PATH}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -704,7 +704,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: main
           submodules: recursive

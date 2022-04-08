@@ -21,7 +21,7 @@ jobs:
     timeout-minutes: 720
     steps:
       - name: Checkout PyTorch
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           path: pytorch
       - name: Update self-hosted PyTorch
@@ -54,7 +54,7 @@ jobs:
           echo "$PR_BODY" > ${PR_BODY_FILE}
           python pytorch/.github/scripts/run_torchbench.py --pr-body "${PR_BODY_FILE}" set-torchbench-branch
       - name: Checkout TorchBench
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           repository: pytorch/benchmark
           path: benchmark

@@ -106,7 +106,7 @@ jobs:
         run: |
           env | grep '^GITHUB' > "/tmp/github_env_${GITHUB_RUN_ID}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -117,7 +117,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: main
           submodules: recursive
@@ -265,7 +265,7 @@ jobs:
           name: conda-py3_7-cpu
           path: "${{ runner.temp }}/artifacts/"
       - name: Checkout PyTorch
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -276,7 +276,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: main
           submodules: recursive
@@ -534,7 +534,7 @@ jobs:
         run: |
           env | grep '^GITHUB' > "/tmp/github_env_${GITHUB_RUN_ID}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -545,7 +545,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: main
           submodules: recursive
@@ -694,7 +694,7 @@ jobs:
           name: conda-py3_7-cuda10_2
           path: "${{ runner.temp }}/artifacts/"
       - name: Checkout PyTorch
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -705,7 +705,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: main
           submodules: recursive
@@ -975,7 +975,7 @@ jobs:
         run: |
           env | grep '^GITHUB' > "/tmp/github_env_${GITHUB_RUN_ID}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -986,7 +986,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: main
           submodules: recursive
@@ -1138,7 +1138,7 @@ jobs:
           name: conda-py3_7-cuda11_3
           path: "${{ runner.temp }}/artifacts/"
       - name: Checkout PyTorch
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -1149,7 +1149,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: main
           submodules: recursive
@@ -1419,7 +1419,7 @@ jobs:
         run: |
           env | grep '^GITHUB' > "/tmp/github_env_${GITHUB_RUN_ID}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -1430,7 +1430,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: main
           submodules: recursive
@@ -1582,7 +1582,7 @@ jobs:
           name: conda-py3_7-cuda11_5
           path: "${{ runner.temp }}/artifacts/"
       - name: Checkout PyTorch
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -1593,7 +1593,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: main
           submodules: recursive
@@ -1862,7 +1862,7 @@ jobs:
         run: |
           env | grep '^GITHUB' > "/tmp/github_env_${GITHUB_RUN_ID}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -1873,7 +1873,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: main
           submodules: recursive
@@ -2021,7 +2021,7 @@ jobs:
           name: conda-py3_8-cpu
           path: "${{ runner.temp }}/artifacts/"
       - name: Checkout PyTorch
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -2032,7 +2032,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: main
           submodules: recursive
@@ -2290,7 +2290,7 @@ jobs:
         run: |
           env | grep '^GITHUB' > "/tmp/github_env_${GITHUB_RUN_ID}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -2301,7 +2301,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: main
           submodules: recursive
@@ -2450,7 +2450,7 @@ jobs:
           name: conda-py3_8-cuda10_2
           path: "${{ runner.temp }}/artifacts/"
       - name: Checkout PyTorch
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -2461,7 +2461,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: main
           submodules: recursive
@@ -2731,7 +2731,7 @@ jobs:
         run: |
           env | grep '^GITHUB' > "/tmp/github_env_${GITHUB_RUN_ID}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -2742,7 +2742,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: main
           submodules: recursive
@@ -2894,7 +2894,7 @@ jobs:
           name: conda-py3_8-cuda11_3
           path: "${{ runner.temp }}/artifacts/"
       - name: Checkout PyTorch
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -2905,7 +2905,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: main
           submodules: recursive
@@ -3175,7 +3175,7 @@ jobs:
         run: |
           env | grep '^GITHUB' > "/tmp/github_env_${GITHUB_RUN_ID}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -3186,7 +3186,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: main
           submodules: recursive
@@ -3338,7 +3338,7 @@ jobs:
           name: conda-py3_8-cuda11_5
           path: "${{ runner.temp }}/artifacts/"
       - name: Checkout PyTorch
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -3349,7 +3349,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: main
           submodules: recursive
@@ -3618,7 +3618,7 @@ jobs:
         run: |
           env | grep '^GITHUB' > "/tmp/github_env_${GITHUB_RUN_ID}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -3629,7 +3629,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: main
           submodules: recursive
@@ -3777,7 +3777,7 @@ jobs:
           name: conda-py3_9-cpu
           path: "${{ runner.temp }}/artifacts/"
       - name: Checkout PyTorch
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -3788,7 +3788,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: main
           submodules: recursive
@@ -4046,7 +4046,7 @@ jobs:
         run: |
           env | grep '^GITHUB' > "/tmp/github_env_${GITHUB_RUN_ID}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -4057,7 +4057,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: main
           submodules: recursive
@@ -4206,7 +4206,7 @@ jobs:
           name: conda-py3_9-cuda10_2
           path: "${{ runner.temp }}/artifacts/"
       - name: Checkout PyTorch
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -4217,7 +4217,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: main
           submodules: recursive
@@ -4487,7 +4487,7 @@ jobs:
         run: |
           env | grep '^GITHUB' > "/tmp/github_env_${GITHUB_RUN_ID}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -4498,7 +4498,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: main
           submodules: recursive
@@ -4650,7 +4650,7 @@ jobs:
           name: conda-py3_9-cuda11_3
           path: "${{ runner.temp }}/artifacts/"
       - name: Checkout PyTorch
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -4661,7 +4661,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: main
           submodules: recursive
@@ -4931,7 +4931,7 @@ jobs:
         run: |
           env | grep '^GITHUB' > "/tmp/github_env_${GITHUB_RUN_ID}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -4942,7 +4942,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: main
           submodules: recursive
@@ -5094,7 +5094,7 @@ jobs:
           name: conda-py3_9-cuda11_5
           path: "${{ runner.temp }}/artifacts/"
       - name: Checkout PyTorch
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -5105,7 +5105,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: main
           submodules: recursive
@@ -5374,7 +5374,7 @@ jobs:
         run: |
           env | grep '^GITHUB' > "/tmp/github_env_${GITHUB_RUN_ID}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -5385,7 +5385,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: main
           submodules: recursive
@@ -5533,7 +5533,7 @@ jobs:
           name: conda-py3_10-cpu
           path: "${{ runner.temp }}/artifacts/"
       - name: Checkout PyTorch
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -5544,7 +5544,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: main
           submodules: recursive
@@ -5802,7 +5802,7 @@ jobs:
         run: |
           env | grep '^GITHUB' > "/tmp/github_env_${GITHUB_RUN_ID}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -5813,7 +5813,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: main
           submodules: recursive
@@ -5962,7 +5962,7 @@ jobs:
           name: conda-py3_10-cuda10_2
           path: "${{ runner.temp }}/artifacts/"
       - name: Checkout PyTorch
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -5973,7 +5973,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: main
           submodules: recursive
@@ -6243,7 +6243,7 @@ jobs:
         run: |
           env | grep '^GITHUB' > "/tmp/github_env_${GITHUB_RUN_ID}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -6254,7 +6254,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: main
           submodules: recursive
@@ -6406,7 +6406,7 @@ jobs:
           name: conda-py3_10-cuda11_3
           path: "${{ runner.temp }}/artifacts/"
       - name: Checkout PyTorch
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -6417,7 +6417,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: main
           submodules: recursive
@@ -6687,7 +6687,7 @@ jobs:
         run: |
           env | grep '^GITHUB' > "/tmp/github_env_${GITHUB_RUN_ID}"
       - name: Checkout PyTorch
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -6698,7 +6698,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: main
           submodules: recursive
@@ -6850,7 +6850,7 @@ jobs:
           name: conda-py3_10-cuda11_5
           path: "${{ runner.temp }}/artifacts/"
       - name: Checkout PyTorch
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -6861,7 +6861,7 @@ jobs:
           git clean -fxd
         working-directory: pytorch
       - name: Checkout pytorch/builder
-        uses: clee2000/checkout
+        uses: clee2000/checkout@fetch-depth
         with:
           ref: main
           submodules: recursive
