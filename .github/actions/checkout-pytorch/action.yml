@@ -26,13 +26,13 @@ runs:
     - name: Checkout PyTorch
       uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
       with:
-        ref: viable/strict
+        ref: refs/heads/viable/strict
         fetch-depth: -1
 
     - name: Checkout PyTorch
       uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
       with:
-        ref: master
+        ref: refs/heads/master
         fetch-depth: -1
     - name: Checkout PyTorch
       uses: clee2000/checkout@5304eead2e9302d0257766b8483eea1f6b6288c4
