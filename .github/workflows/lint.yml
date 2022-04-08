@@ -23,7 +23,7 @@ jobs:
       - name: Checkout PyTorch
         uses: pytorch/pytorch/.github/actions/checkout-pytorch@clee2000/please-ignore
       - name: composite
-        uses: ./github/actions/echo
+        uses: ./.github/actions/echo
 
   quick-checks:
     name: quick-checks
