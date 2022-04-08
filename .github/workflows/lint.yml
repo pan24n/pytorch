@@ -13,6 +13,15 @@ jobs:
     env:
       THINGY: "hello adsfasdfasdf"
     steps:
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+          architecture: x64
+      # [see note: pytorch repo ref]
+      # deep clone (fetch-depth 0 required to use git merge-base)
+      - name: Checkout PyTorch
+        uses: pytorch/pytorch/.github/actions/checkout-pytorch@clee2000/please-ignore
       - name: composite
         uses: ./github/actions/echo
 
