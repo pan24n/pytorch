@@ -1,0 +1,10 @@
+name: Echo
+
+description: echo an env variable
+runs:
+  using: composite
+  steps:
+    - shell: bash
+      id: echo
+      run: |
+        echo "${THINGY}"

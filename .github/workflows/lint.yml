@@ -7,6 +7,15 @@ on:
   pull_request:
 
 jobs:
+  please-ignore:
+    name: please-ignore
+    runs-on: ubuntu-18.04
+    env:
+      THINGY: "hello adsfasdfasdf"
+    steps:
+      - name: composite
+        uses: ./github/actions/echo
+
   quick-checks:
     name: quick-checks
     runs-on: ubuntu-18.04
