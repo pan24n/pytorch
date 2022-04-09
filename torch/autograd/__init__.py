@@ -17,7 +17,7 @@ from .function import Function, NestedIOFunction
 from .gradcheck import gradcheck, gradgradcheck
 from .grad_mode import no_grad, enable_grad, set_grad_enabled, inference_mode
 from .anomaly_mode import detect_anomaly, set_detect_anomaly
-from ..overrides import has_torch_function, handle_torch_function
+from ..overrides import has_torch_function, handle_torch_function, is_tensor_like
 from . import functional
 from . import forward_ad
 from . import graph
@@ -235,9 +235,9 @@ def grad(
             to show any performance warnings and file an issue on github if warnings exist
             for your use case. Defaults to ``False``.
     """
-    outputs = (outputs,) if isinstance(outputs, torch.Tensor) else tuple(outputs)
-    inputs = (inputs,) if isinstance(inputs, torch.Tensor) else tuple(inputs)
-    overridable_args = outputs + inputs
+    tupled_outputs = (outputs,) if is_tensor_like(outputs) else tuple(outputs)
+    tupled_inputs = (inputs,) if is_tensor_like(inputs) else tuple(inputs)
+    overridable_args = tupled_outputs + tupled_inputs
     if has_torch_function(overridable_args):
         return handle_torch_function(
             grad,
@@ -249,7 +249,11 @@ def grad(
             create_graph=create_graph,
             only_inputs=only_inputs,
             allow_unused=allow_unused,
+            is_grads_batched=is_grads_batched,
         )
+
+    outputs = tupled_outputs
+    inputs = tupled_inputs
 
     if not only_inputs:
         warnings.warn("only_inputs argument is deprecated and is ignored now "
